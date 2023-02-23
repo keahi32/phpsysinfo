@@ -34,6 +34,8 @@
          $stmt->fetch();
          if($_COOKIE['name'] == $sesion){
             define('PSI_APP_ROOT', dirname(__FILE__));
+            $web=$_SERVER['SERVER_NAME'];
+            header( "refresh:7; url=http://$web:80" );
 
 if (version_compare("5.1.3", PHP_VERSION, ">")) {
     die("PHP 5.1.3 or greater is required!!!");
